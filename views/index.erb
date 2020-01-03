@@ -1,15 +1,15 @@
 <p>goods page</p>
 
 
-<div class="product-index">
+<div id="product-index">
   <% @products.each do | product | %>
 
     <span class="products">
 
       <a href="/products/<%= product['product_id']%>">
-        <img class="product-images" src="<%= product['image']%>" alt="image of <%= product['description'] %> ">
-        <p><%= product['product_name'] %></p>
-        <p><%= product['price']%></p>
+        <img class="product-images" src="<%= product['image']%>" alt="image of <%= product['description'] %> "><br>
+        <p><%= product['product_name'] %></p><br>
+        <p>$<%= product['price']%></p>
       </a>
 
     </span>

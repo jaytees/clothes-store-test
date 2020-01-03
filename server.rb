@@ -16,6 +16,18 @@ after do
 end
 
 class Product < ActiveRecord::Base
+  belongs_to :collection
+  belongs_to :type
+end
+
+class Collection < ActiveRecord::Base
+  has_many :products
+  has_many :types, through: :products
+end
+
+class Type < ActiveRecord::Base
+  has_many :products
+  has_many :collections, through: :products
 end
 
 # binding.pry
