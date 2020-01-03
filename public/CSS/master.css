@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Pragati+Narrow:700&display=swap');
+
+* {
+  font-family: 'Pragati Narrow', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#homepage-logo {
+  font-size: 1.5em;
+  letter-spacing: 0.5em;
+  word-spacing: 0.1em;
+}
+
+footer {
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+}
