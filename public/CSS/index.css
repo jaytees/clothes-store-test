@@ -1,0 +1,20 @@
+div#product-index {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+span.products {
+  border: 1px solid red;
+  height: 22em;
+  width: 20em;
+}
+
+.products,p {
+  display: inline-block;
+}
+
+img.product-images {
+  height: 1em;
+  width: 1em;
+}
