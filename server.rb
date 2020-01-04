@@ -46,12 +46,20 @@ get '/products' do
 
   @products = Product.all
 
-  erb :index
+  erb :index_products
 end
 
-#individual results
-get '/products/:product_id' do
+get '/collections' do
 
+  erb :index_collections
+end
+
+
+
+#individual results
+get '/products/:id' do
+
+  @products = Product.find params[:id]
 
   erb :show
 end

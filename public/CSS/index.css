@@ -6,7 +6,7 @@ div#product-index {
 }
 
 span.products {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 22em;
   width: 15em;
   margin: 0 1em 1em;

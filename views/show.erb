@@ -1,0 +1,23 @@
+<nav id="index-nav">
+  <a href="/collections">Collections</a>
+  <a href="/types">Style</a>
+  <a href="/products">Products</a>
+</nav>
+
+
+
+  <div id="grid">
+    <div id="product-viewer">
+      <div id="product-image">
+        <img src="<%= @products['image'] %>"  alt="<%= @products['description'] %>">
+      </div>
+      <div id="product-info">
+        <p><%= @products['product_name']  %></p>
+        <p><%= @products['description']  %></p>
+        <p><%= @products.type['product_type']%></p>
+        <p><%= @products.collection['collection_name']%> | <%= @products.collection['collection_year']%></p>
+        <p><%= @products['price'] %></p>
+      </div>
+    </div>
+
+  </div>

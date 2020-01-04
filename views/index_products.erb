@@ -1,4 +1,7 @@
-<p>goods page</p>
+<nav id="index-nav">
+  <a href="/collections">Collections</a>
+  <a href="/types">Style</a>
+</nav>
 
 
 <div id="product-index">
@@ -8,8 +11,9 @@
 
       <a href="/products/<%= product['product_id']%>">
         <img class="product-images" src="<%= product['image']%>" alt="image of <%= product['description'] %> "><br>
-        <p><%= product['product_name'] %></p><br>
+        <p><%= product['product_name'] %> | <%= product.collection['collection_year'] %> Collection</p><br>
         <p>$<%= product['price']%></p>
+        <p></p>
       </a>
 
     </span>
