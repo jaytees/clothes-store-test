@@ -1,0 +1,21 @@
+<p><%= @collections['collection_name'] %></p>
+
+
+<div id="product-index">
+  <% @products.each do | product | %>
+      <% if product['collection_id'] == params[:id].to_i %>
+        <span class="products">
+
+          <a href="/products/<%= product['product_id']%>">
+            <img class="product-images" src="<%= product['image']%>" alt="image of <%= product['description'] %> "><br>
+            <p><%= product['product_name'] %> | <%= product.collection['collection_year'] %> Collection</p><br>
+            <p>$<%= product['price']%></p>
+            <p></p>
+          </a>
+          
+        </span>
+
+
+      <% end %>
+  <% end %>
+</div>

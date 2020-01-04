@@ -1,1 +1,15 @@
-<p>collections page</p>
+
+<div id="collection-index">
+  <% @collections.each do | collection |%>
+
+    <span class="collection-links">
+      <div class="image-wrapper">
+        <a href="/collections/<%= collection['collection_id'] %>" class="collection-anchor">
+          <img src="<%= collection['collection_image'] %>" alt="collection image" class="collection-image">
+          <p id="collection-name"><%= collection['collection_name'] %> | <%=  collection['collection_year'] %></p>
+        </a>
+      </div>
+    </span>
+
+  <% end %>
+</div>

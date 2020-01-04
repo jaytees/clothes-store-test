@@ -51,6 +51,8 @@ end
 
 get '/collections' do
 
+  @collections = Collection.all
+
   erb :index_collections
 end
 
@@ -61,5 +63,13 @@ get '/products/:id' do
 
   @products = Product.find params[:id]
 
-  erb :show
+  erb :show_product
+end
+
+get '/collections/:id' do
+
+  @products = Product.all
+  @collections = Collection.find params[:id]
+
+  erb :show_collection
 end
