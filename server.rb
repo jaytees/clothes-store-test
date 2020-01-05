@@ -33,7 +33,7 @@ end
 class User < ActiveRecord::Base
 end
 
-#
+
 # binding.pry
 # puts "stop here"
 
@@ -52,6 +52,20 @@ get '/products/new' do
   erb :new
 end
 
+
+post '/products' do
+
+  Product.create(
+    type_id: params[:type_id],
+    collection_id: params[:collection_id],
+    product_name: params[:product_name],
+    description: params[:description],
+    price: params[:price],
+    image: params[:image]
+  )
+
+  redirect '/products'
+end
 
 
 
@@ -105,6 +119,9 @@ end
       # if params[:username] == @users['username']
       #   && params[:password] == @users['password']
       # then redirect
+
+      # params[:username] = the value that is entered into the field
+      # username: symbol for checking table/hash User using active record
 #
 #   redirect '/products/new'
 # end
