@@ -1,0 +1,48 @@
+<p>Add new product</p>
+
+<form action="/products" method="post">
+
+  <label>Product Type:
+    <select name="type_id">
+
+      <% @types.each do | type | %>
+          <option value="<%= type['type_id'] %>"><%= type['product_type'] %></option>
+      <% end %>
+
+    </select>
+  </label>
+  <br>
+
+  <label>
+    Collection:
+    <input type="text" name="collection_id">
+  </label>
+  <br>
+
+  <label>
+    Product Name:
+    <input type="text" name="product_name">
+  </label>
+  <br>
+
+  <label>
+    Product Description:
+    <input type="description">
+  </label>
+  <br>
+
+  <label>
+    Price:
+    <input type="text" name="price">
+  </label>
+  <br>
+
+  <label>
+    Image:
+    <input type="text" name="image">
+  </label>
+  <br>
+
+  <input type="submit" name="" value="Create Product">
+
+</form>

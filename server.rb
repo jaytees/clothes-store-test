@@ -30,6 +30,10 @@ class Type < ActiveRecord::Base
   has_many :collections, through: :products
 end
 
+class User < ActiveRecord::Base
+end
+
+#
 # binding.pry
 # puts "stop here"
 
@@ -38,6 +42,17 @@ end
 get '/' do
   erb :home
 end
+
+# CREATE
+get '/products/new' do
+
+  @types = Type.all
+  @collections = Collection.all
+
+  erb :new
+end
+
+
 
 
 #READ Routes
@@ -73,3 +88,23 @@ get '/collections/:id' do
 
   erb :show_collection
 end
+
+# # Login page
+# get '/login' do
+#
+#   erb :login
+# end
+#
+# post '/login' do
+#
+#   # @users = User.all
+#
+#   # query db here
+      #
+      # loop through users table
+      # if params[:username] == @users['username']
+      #   && params[:password] == @users['password']
+      # then redirect
+#
+#   redirect '/products/new'
+# end
